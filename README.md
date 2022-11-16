@@ -15,6 +15,7 @@ Requirements for the software and other tools to build, test and push
 - [ffmpeg](https://www.ffmpeg.org/download.html)
 - [Discord Token](https://discord.com/developers/applications)
 - [VS Code](https://code.visualstudio.com/)
+- [Discord.js](https://discord.js.org/)
 
 ### Installing
 

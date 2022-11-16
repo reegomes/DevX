@@ -33,6 +33,8 @@ And start this on terminal
 
     node .
 
+![Bot Running](https://github.com/reegomes/DevX/blob/master/public/Screenshot_1.png?raw=true)
+
 If your terminal/console show this message you do the steps correctly
 
 ## Running the tests

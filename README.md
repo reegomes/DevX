@@ -1,9 +1,6 @@
-# Project Title
+# DevX - Discord Bot
 
-One Paragraph of the project description
-
-Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
+DevX is a multi-purpose bot
 
 ## Getting Started
 
@@ -14,80 +11,42 @@ for notes on deploying the project on a live system.
 ### Prerequisites
 
 Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+- [NodeJS]( https://nodejs.org/en/download/)
+- [ffmpeg](https://www.ffmpeg.org/download.html)
+- [Discord Token](https://discord.com/developers/applications)
+- [VS Code](https://code.visualstudio.com/)
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development
-environment running
+A step by step of how to create your environment and do it run
 
-Say what the step will be
+Creating a enviroment file
 
-    Give the example
+    Create a file called .env
 
-And repeat
+And put the Token and Client ID given from Discord
 
-    until finished
+    TOKEN=
+    CLIENT_ID=
 
-End with an example of getting some data out of the system or using it
-for a little demo
+And start this on terminal
+
+    node .
+
+If your terminal/console show this message you do the steps correctly
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Sample Tests
-
-Explain what these tests test and why
-
-    Give an example
-
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
-
-## Deployment
-
-Add additional notes to deploy this on a live system
-
-## Built With
-
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
+Not implemented yet
 
 ## Authors
 
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
+  - **Renato Souza** - *Provided the initial code* -
+    [Git](https://github.com/reegomes)
 
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
+## TO DO
 
-## License
-
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
-
-## Acknowledgments
-
-  - Hat tip to anyone whose code is used
-  - Inspiration
+  - Shuffle Command
+  - Store data with some non relational database
+  - User Profile with playlists and stats about what they listen
   - etc

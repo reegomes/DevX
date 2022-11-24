@@ -39,7 +39,6 @@ client.player = new Player(client, {
 
 client.on("ready", () => {
     console.log(`${client.user.username} está On 🔥!`)
-    client.user.setActivity('Tocando: ', { type: `Listening ${queue.current}`})
     
     const guild_ids = client.guilds.cache.map(guild => guild.id);
 

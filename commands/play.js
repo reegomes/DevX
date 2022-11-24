@@ -32,7 +32,15 @@ module.exports = {
 
 		const queue = await client.player.createQueue(interaction.guild);
 
-		if (!queue.connection) await queue.connect(interaction.member.voice.channel)
+        try {
+            if (!queue.connection) await queue.connect(interaction.member.voice.channel)
+        } catch (error) {
+            queue.destroy();
+            return await msg.reply({
+                content: "Não consegui entrar no servidor por causa de um erro na fila.",
+                ephemeral: true,
+            });
+        }
 
 		let embed = new EmbedBuilder()
 
@@ -62,16 +70,17 @@ module.exports = {
                 requestedBy: interaction.user,
                 searchEngine: QueryType.YOUTUBE_PLAYLIST
             })
-
-            if (result.tracks.length === 0)
+            if(result.tracks.length === 0)
                 return interaction.reply(`Nenhuma playlist encontrada com o link ${url}`)
+        
+            // const playlist = result.playlist
 
-            const playlist = result.playlist
+            // console.log(playlist)
             await queue.addTracks(result.tracks)
             embed
-                .setDescription(`**${result.tracks.length} músicas da playlist [${playlist.title}](${playlist.url})** foram adicionadas na fila`)
-                .setThumbnail(playlist.thumbnail)
-
+                .setDescription(`** músicas da playlist ** foram adicionadas na fila`)
+                // .setDescription(`**${playlist.tracks.length} músicas da playlist [${playlist.title}](${playlist.url})** foram adicionadas na fila`)
+            //     .setThumbnail(playlist.thumbnail)
 		} 
         else if (interaction.options.getSubcommand() === "search") {
 

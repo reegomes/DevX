@@ -24,8 +24,12 @@ module.exports = {
         await interaction.reply({
             embeds: [
                 new EmbedBuilder()
-                    .setDescription(`**Atualmente tocando**\n` + 
-                        (currentSong ? `\`[${currentSong.duration}]\` ${currentSong.title} - <@${currentSong.requestedBy.id}>` : "Nada") +
+                    .setDescription(
+                        // `**Atualmente tocando**\n` + 
+                        // (currentSong ? `\`[${currentSong.duration}]\` ${currentSong.title} - <@${currentSong.requestedBy.id}>` : "Nada") +
+                        // `\n\n**Fila**\n${queueString}`
+                        `**Atualmente tocando**\n` + 
+                        (currentSong ? `\`[${currentSong.duration}]\` ${currentSong.title}` : "Nada") +
                         `\n\n**Fila**\n${queueString}`
                     )
                     .setThumbnail(currentSong.setThumbnail)

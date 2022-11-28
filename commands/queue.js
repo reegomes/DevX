@@ -16,7 +16,7 @@ module.exports = {
         }
 
         const queueString = queue.tracks.slice(0, 10).map((song, i) => {
-            return `${i}) [${song.duration}]\` ${song.title} - <@${song.requestedBy.id}>`
+            return `${i+1}) [${song.duration}]\` ${song.title} - <@${song.requestedBy.id}>`
         }).join("\n")
 
         const currentSong = queue.current
